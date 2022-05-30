@@ -1,21 +1,22 @@
+/* eslint-disable no-undef */
 // TEST CODE
 const { cohortSearch } = require('../src/cohortSearch.js')
 
-describe("Cohort Search", () => {
-  it("returns cohort name if found", () => {
+describe('Cohort Search', () => {
+  it('returns cohort name if found', () => {
     // setup
-    const cohortList = ["class 1", "class 2"]
+    const cohortList = ['class 1', 'class 2']
     // execute
-    const result = cohortSearch(cohortList, "class 1")
+    const result = cohortSearch(cohortList, 'class 1')
     // verify
     expect(result).toEqual(true)
   })
-  
-  it("returns cohort name if not found", () => {
+
+  it('returns cohort name if not found', () => {
     // setup
-    const cohortList = ["class 1", "class 2"]
+    const cohortList = ['class 1', 'class 2']
     // execute
-    const result = cohortSearch(cohortList, "class 3")
+    const result = cohortSearch(cohortList, 'class 3')
     // verify
     expect(result).toEqual(false)
   })
